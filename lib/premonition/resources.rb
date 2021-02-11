@@ -36,7 +36,7 @@ module Jekyll
             'info' => { 'meta' => { 'fa-icon' => 'fa-info-circle' } },
             'warning' => { 'meta' => { 'fa-icon' => 'fa-exclamation-circle' } },
             'error' => { 'meta' => { 'fa-icon' => 'fa-exclamation-triangle' } },
-            'citation' => { 'meta' => { 'fa-icon' => 'fa-quote-left' }, 'template' => '<div class="premonition {{type}}"><div class="fas {{meta.fa-icon}}"></div><blockquote class="content blockquote"{% if cite %} cite="{{cite}}"{% endif %}>{{content}}{% if header %}<footer class="blockquote-footer"><cite title="{{title}}">{{title}}</cite></footer>{% endif %}</blockquote></div>' }
+            'citation' => { 'meta' => { 'fa-icon' => 'fa-quote-left' }, 'template' => '<div class="premonition {{type}}"><div class="fas {{meta.fa-icon}}"></div><blockquote class="content blockquote"{% if cite %} cite="{{cite}}"{% endif %}>{{content}}{% if header %}<footer class="blockquote-footer"><cite title="{{title}}">{% if cite %}<a href="{{cite}}">{{title}}</a>{% else %}{{title}}{% endif %}</cite></footer>{% endif %}</blockquote></div>' }
           }
         }
       end
